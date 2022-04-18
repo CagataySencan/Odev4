@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/anaSayfa">
+    <fragment
+        android:id="@+id/anaSayfa"
+        android:name="com.cagataysencan.odev4.AnaSayfa"
+        android:label="fragment_ana_sayfa"
+        tools:layout="@layout/fragment_ana_sayfa">
+        <action
+            android:id="@+id/anaSayfa_sayfaA"
+            app:destination="@id/sayfaA" />
+        <action
+            android:id="@+id/anaSayfa_sayfaX"
+            app:destination="@id/sayfaX" />
+    </fragment>
+    <fragment
+        android:id="@+id/sayfaA"
+        android:name="com.cagataysencan.odev4.SayfaA"
+        android:label="fragment_sayfa_a"
+        tools:layout="@layout/fragment_sayfa_a">
+        <action
+            android:id="@+id/sayfaA_sayfaB"
+            app:destination="@id/sayfaB" />
+    </fragment>
+    <fragment
+        android:id="@+id/sayfaB"
+        android:name="com.cagataysencan.odev4.SayfaB"
+        android:label="fragment_sayfa_b"
+        tools:layout="@layout/fragment_sayfa_b">
+        <action
+            android:id="@+id/sayfaB_sayfaY"
+            app:destination="@id/sayfaY" />
+    </fragment>
+    <fragment
+        android:id="@+id/sayfaX"
+        android:name="com.cagataysencan.odev4.SayfaX"
+        android:label="fragment_sayfa_x"
+        tools:layout="@layout/fragment_sayfa_x">
+        <action
+            android:id="@+id/sayfaX_sayfaY"
+            app:destination="@id/sayfaY"
+            app:popUpTo="@id/sayfaX"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/sayfaY"
+        android:name="com.cagataysencan.odev4.SayfaY"
+        android:label="fragment_sayfa_y"
+        tools:layout="@layout/fragment_sayfa_y">
+        <action
+            android:id="@+id/sayfaY_anaSayfa"
+            app:destination="@id/anaSayfa" />
+    </fragment>
+</navigation>
